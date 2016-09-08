@@ -1,0 +1,12 @@
+When writing loops in python, things within the loop need to be tabbed. If there is a 
+loop within a loop, then the things within the interior loop need to be double tabbed. Etc.
+
+%paste% pastes whatever is copied into the command line
+
+%run filename.whatever	runs an executable file within ipython. Your working terminal must
+be set in the working directory where the file is located. Need a directory just for python
+scripts.
+
+Use meaningful names for variables when writing code for your homework and otherwise.
+
+control c ends an infinite loop
