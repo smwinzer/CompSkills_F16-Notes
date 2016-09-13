@@ -10,3 +10,6 @@ scripts.
 Use meaningful names for variables when writing code for your homework and otherwise.
 
 control c ends an infinite loop
+
+To run a python program from the command line: python3.5 filename.py 
+Can use this to run python program and redirect it to a file (i.e. for HW)
