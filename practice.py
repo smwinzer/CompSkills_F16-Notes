@@ -47,3 +47,8 @@ while i < 10:
 		print( "what?" )
 	i = i +1
 '''
+
+'''
+The way to make strings/variables in ipython: string1="ajdaksasbgkjansdfgjk"
+The way to count characters in a string: string1.count("a")
+'''
