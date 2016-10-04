@@ -1,0 +1,32 @@
+His way of doing HW4
+
+import sys
+
+argumentList = sys.stdin.readlines()
+print("argumentList: %s" % (argumentList)) #control d to exit stdin
+
+#Tell program where you want it to take the input info from, use fastaHeaders.txt instead
+	cat testHeaders.fasta | ./reformatReads.py
+
+#get arguments from stdin
+for nextHeader in argumentList:
+	#Extract technology type. forward and reverse primers, and gene name
+	Fields = nextHeader.split()
+	technology, sampleID, Primers, gene = Fields
+	technology = technology.split(':')
+	technology = technology[0][1:]
+	
+	Primers = Primers.split('|')
+	forwardPrimer, reversePrimer = Primers[0], Primers[2]
+	
+	#Extract country of origin
+	countryOfOrigin = sampleID.split(':')[3][:2]
+	
+	#Create sampleID
+	sampleID = sampleID.split(':')[3]+ '_'+ gene
+	print("sampleID: %s % sampleID)
+
+	#print("country of origin: %s" % countryOfOrigin)	
+	#print("nextHeader: %s" %nextHeader)
+	#print("fields: %s" % Fields)
+	#print("technology: %s\tsampleID%s\tPrimers: %s (fwd: %s\trev:%s\t)\tgene: %s\n" % (technology, sampleID, Primers, forwardPrimer, reversePrimer gene))
